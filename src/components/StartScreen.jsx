@@ -51,7 +51,7 @@ export default function StartScreen({ onStart, difficulty, setDifficulty, leader
 
   return (
     <motion.div
-      className="relative flex flex-col items-center justify-center min-h-screen px-4"
+      className="relative flex flex-col items-center justify-start min-h-full py-12 px-4 overflow-y-auto"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -106,7 +106,7 @@ export default function StartScreen({ onStart, difficulty, setDifficulty, leader
           {DIFFICULTIES.map(d => (
             <motion.button
               key={d.id}
-              className={`diff-btn relative p-4 rounded-lg font-rajdhani text-center transition-all ${
+              className={`diff-btn relative p-3 sm:p-4 rounded-lg font-rajdhani text-center transition-all ${
                 difficulty === d.id ? d.activeClass : 'text-gray-400'
               }`}
               onClick={() => setDifficulty(d.id)}
