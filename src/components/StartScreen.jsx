@@ -72,16 +72,16 @@ export default function StartScreen({ onStart, difficulty, setDifficulty, leader
       </motion.div>
 
       {/* ── Title ── */}
-      <motion.div variants={itemVariants} className="text-center mb-2">
+      <motion.div variants={itemVariants} className="text-center mb-2 mt-8 md:mt-0">
         <motion.h1
-          className="font-orbitron font-black text-8xl md:text-9xl gradient-title tracking-widest leading-none select-none"
+          className="font-orbitron font-black text-6xl sm:text-7xl md:text-9xl gradient-title tracking-widest leading-none select-none"
           animate={{ filter: ['brightness(1)', 'brightness(1.3)', 'brightness(1)'] }}
           transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         >
           TYPE
         </motion.h1>
         <motion.h1
-          className="font-orbitron font-black text-8xl md:text-9xl gradient-title tracking-widest leading-none select-none -mt-4"
+          className="font-orbitron font-black text-6xl sm:text-7xl md:text-9xl gradient-title tracking-widest leading-none select-none sm:-mt-2 md:-mt-4"
           animate={{ filter: ['brightness(1.3)', 'brightness(1)', 'brightness(1.3)'] }}
           transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         >
@@ -102,7 +102,7 @@ export default function StartScreen({ onStart, difficulty, setDifficulty, leader
         <p className="font-orbitron text-xs text-center text-cyan-400 tracking-widest mb-4 opacity-60 uppercase">
           — Select Difficulty —
         </p>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {DIFFICULTIES.map(d => (
             <motion.button
               key={d.id}
@@ -135,7 +135,7 @@ export default function StartScreen({ onStart, difficulty, setDifficulty, leader
       {/* ── Start Button ── */}
       <motion.div variants={itemVariants}>
         <motion.button
-          className="btn-cyber relative px-16 py-5 text-xl rounded-lg font-orbitron tracking-widest"
+          className="btn-cyber relative px-10 md:px-16 py-4 md:py-5 text-lg md:text-xl rounded-lg font-orbitron tracking-widest"
           onClick={onStart}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.96 }}

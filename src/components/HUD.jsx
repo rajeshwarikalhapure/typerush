@@ -17,8 +17,8 @@ export default function HUD({ score, health, combo, wpm, accuracy, elapsed, acti
     : '0 0 10px #ff0055, 0 0 20px #ff005544';
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 p-3 pointer-events-none">
-      <div className="flex items-start gap-3 max-w-screen-xl mx-auto">
+    <div className="fixed top-0 left-0 right-0 z-50 p-2 md:p-3 pointer-events-none">
+      <div className="flex flex-wrap md:flex-nowrap items-start gap-2 md:gap-3 max-w-screen-xl mx-auto">
 
         {/* ── Wave ── */}
         <div className="glass border-glow-cyan px-4 py-2 rounded-xl flex flex-col items-center min-w-[70px]">
@@ -41,7 +41,7 @@ export default function HUD({ score, health, combo, wpm, accuracy, elapsed, acti
         </div>
 
         {/* ── Health bar (center) ── */}
-        <div className="glass border-glow-cyan px-4 py-2 rounded-xl flex-1 flex flex-col gap-1">
+        <div className="glass border-glow-cyan px-4 py-2 rounded-xl flex-1 flex flex-col gap-1 w-full md:w-auto order-last md:order-none">
           <div className="flex justify-between items-center">
             <span className="font-mono text-[10px] text-cyan-600 tracking-widest uppercase">Health</span>
             <span className="font-mono text-xs" style={{ color: healthColor }}>{health}%</span>
