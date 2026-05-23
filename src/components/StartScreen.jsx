@@ -51,7 +51,7 @@ export default function StartScreen({ onStart, difficulty, setDifficulty, leader
 
   return (
     <motion.div
-      className="relative flex flex-col items-center justify-start min-h-full py-12 px-4 overflow-y-auto"
+      className="relative flex flex-col items-center justify-start w-full h-full min-h-full py-12 px-4 overflow-y-auto"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
